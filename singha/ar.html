@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AR Museum</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_orange-red.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="module" src="js/model-viewer.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400&family=Prompt:wght@200&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="mdl-layout mdl-js-layout ">
+    <header class="mdl-layout__header mdl-layout__header--transparent">
+      <div class="mdl-layout__header-row">
+        <!-- Title -->
+        <span class="mdl-layout-title fontHome">AR Viewer</span>
+        <!-- Add spacer, to align navigation to the right -->
+        <div class="mdl-layout-spacer"></div>
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+          <a class="mdl-navigation__link" href="scenehouse.html">หน้าหลัก</a>
+          <a class="mdl-navigation__link" href="infohome.html">ข้อมูล</a>
+        </nav>
+      </div>
+    </header>
+    <div class="mdl-layout__drawer">
+      <span class="mdl-layout-title fontHome">AR Viewer</span>
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="scenehouse.html">หน้าหลัก</a>
+        <a class="mdl-navigation__link" href="infohome.html">ข้อมูล</a>
+      </nav>
+    </div>
+    <div class="readpagex">
+      <main class="mdl-layout__content">
+        <div class="page-content">
+          <div class="demo">
+            <model-viewer id="main-model" ar ar-modes="scene-viewer webxr quick-look" camera-controls
+              touch-action="pan-y" src="assets/Statue_V3.glb" shadow-intensity="2" alt="Pra Lokitesuan"
+              interpolation-decay="200" min-camera-orbit='auto auto 200%' max-camera-orbit='auto auto 100%'>
+
+              <button class="hotspot" slot="hotspot-1" data-position="-0.02m 0.01m 0.02m" data-normal="-0.73 1 0.69">
+                <div class="annotation-box">ทองพระบาท และธำมรงค์ที่พระบาทรูปพระตถาคต สื่อว่าทรงยิ่งใหญ่กว่าบรรดาพระตถาคต
+                </div>
+              </button>
+              <button class="hotspot" slot="hotspot-2" data-position="0.000m 0.110m 0.005m" data-normal="-0.73 1 0.69">
+                <div class="annotation-box">พระเนตรที่สามกลางพระนลาฏเหมือนพระศิวะ แสดงความเป็น "พุทธ-อิศวร"</div>
+              </button>
+              <button class="hotspot" slot="hotspot-3" data-position="0.003m 0.123m -0.012m" data-normal="-0.73 1 0.69">
+                <div class="annotation-box">
+                  พระเกศาเกล้าเป็นชฏามุกุฏทรงกระบอกรัดด้วยประคำเต็มไปด้วยรูปพระตถาคตมีรูปพระอมิตาภะประดิษฐ์ด้านหน้า
+                  บ่งบอกว่าเป็นพระโลเกศวร"</div>
+              </button>
+              <button class="hotspot" slot="hotspot-4" data-position="-0.005m 0.104m 0.005m" data-normal="-0.73 1 0.69">
+                <div class="annotation-box-left">พระพักตร์เหมือนพระเจ้าชัยวรมันที่ ๗
+                  ผู้ทรงเปรียบได้กับภาคหรืออวตารของพระโลเกศวร"</div>
+              </button>
+              <!--button class="hotspot" slot="hotspot-hand" data-position="0 0.05m 0" data-normal="-0.73 1 0.69">
+                  <div class="annotation">This hotspot disappears completely</div>
+                </button-->
+              <button class="hotspot" slot="hotspot-foot" data-position="0 3 0" data-normal="-0.07 0.97 0.23"
+                data-visibility-attribute="visible"></button>
+
+              <div class="annotation">พระโลเกศวรเปล่งรัศมี</div>
+            </model-viewer>
+            <script type="module" src="js/custom.js"></script>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+</html>

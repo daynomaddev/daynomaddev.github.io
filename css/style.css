@@ -1,0 +1,231 @@
+body {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+}
+
+.container {
+    padding: 40% 25px 25px 25px;
+}
+
+.container h1 {
+    font-family: 'Noto Sans Thai', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container_vr {
+    padding: 8px 8px 8px 8px;
+}
+
+.container_vr h1 {
+    font-family: 'Noto Sans Thai', sans-serif;
+    text-shadow: 2px 2px #3c3c3c;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+
+.full_img {
+    width: 100%
+}
+
+.c_left {
+    text-align: left;
+    padding-top: 15px;
+}
+
+.c_right {
+    text-align: right;
+    padding-top: 15px;
+}
+
+.c_center {
+    text-align: center;
+}
+
+.scene_btn {
+    margin: 10px;
+    width: 90%;
+}
+
+.mdl-cell p {
+    font-family: 'Noto Sans Thai', sans-serif;
+    font-size: 11px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.mdl-cell a {
+    text-decoration: none;
+    color: #000;
+}
+
+.temple {
+    height: 50%;
+}
+
+.spacing {
+    padding-top: 5px;
+}
+
+.fontHome {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+}
+
+/*PopUp*/
+.popup {
+    width: 100vw;
+    background-color: #000000c4;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    z-index: 15;
+}
+
+#howto {
+    -webkit-box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+
+#showHowtoText {
+    padding: 50px;
+}
+
+.overlayGroup {
+    position: absolute;
+    width: 90vw;
+    z-index: 200;
+}
+
+.ar-center {
+    margin: auto !important;
+    width: 100%;
+    font-family: 'Noto Sans Thai', sans-serif !important;
+    position: fixed !important;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+.cover {
+    width: 60%;
+    padding: 20%;
+    margin-top: 40%;
+}
+
+.coverTemple {
+    width: 60%;
+    padding: 20%;
+    margin-top: 2%;
+}
+
+.full_btn {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+    font-size: 17px !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    padding: 10px !important;
+    width: 90% !important;
+}
+
+/* read */
+.readpage p {
+    padding: 2% 8% 2% 8%;
+    font-size: 17px !important;
+    text-align: justify;
+}
+
+.readpage {
+    margin-top: 15%;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Noto Sans Thai', sans-serif !important;
+    color: #3c3c3c;
+    text-align: center;
+    height: 20%;
+}
+
+.option_choice {
+    padding: 10px 20px 12px 20px;
+    background: rgb(255, 255, 255);
+    color: #696969 !important;
+    border-radius: 8px;
+    border: #909090 solid 1px;
+}
+
+.active {
+    background: rgb(255, 82, 82);
+    color: #fff !important;
+    border: rgb(255, 82, 82) solid 1px;
+}
+
+
+
+@media (max-width: 479px) {
+
+    .mdl-cell--1-col_custom,
+    .mdl-cell--1-col-phone.mdl-cell--1-col-phone {
+        width: calc(20% - 16px) !important;
+    }
+}
+
+audio {
+    width: 90vw;
+}
+
+.home {
+    width: 95vw;
+    height: 95vh;
+}
+
+.war {
+    width: 95vw;
+    height: 70vh;
+}
+
+
+/* Annotation */
+.hotspot {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(195, 195, 195, 0.608);
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.hotspot[slot="hotspot-sign"] {
+    --min-hotspot-opacity: 0;
+    background-color: rgb(216, 216, 216, 0.608);
+}
+
+.hotspot[slot="hotspot-visor"]:not([data-visible]) {
+    background-color: transparent;
+    border: 3px solid rgb(209, 206, 203, 0.608);
+}
+
+.annotation {
+    font-family: 'Noto Sans Thai', sans-serif !important;
+    color: #fff;
+    background-color: #4b4b4ba3;
+    position: absolute;
+    transform: translate(-30px, -120px);
+    border-radius: 10px;
+    width: 160px;
+    padding: 10px;
+    text-align: left;
+}
+
+/* This keeps child nodes hidden while the element loads */
+:not(:defined)>* {
+    display: none;
+}

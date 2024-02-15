@@ -1,0 +1,56 @@
+
+/*Fade Logo */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.mySlides{
+    width: 100% !important;
+}
+
+.webslide{
+    max-width: 100%;
+    padding: 20%;
+    padding-top: 10%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+
+.green-box,
+.blue-box {
+    padding: 50px;
+    width: 200px;
+    height: 200px;
+    animation: zoomLoopAnimation 2.5s infinite alternate;
+}
+
+
+.blue-box {
+    background-color: blue;
+}
+
+@keyframes zoomLoopAnimation {
+    0% {
+        transform: scale(1);
+        /*fade in start */
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1.1);
+        /*fade in over */
+        opacity: 1;
+    }
+}

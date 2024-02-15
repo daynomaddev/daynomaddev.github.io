@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AR Museum</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/material.min.js"></script>
+    <link rel="stylesheet" href="css/material.deep_orange-red.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script type="module" src="js/model-viewer.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400&family=Prompt:wght@200&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container_vr">
+
+        <main class="mdl-layout mdl-layout__content">
+            <div class="mdl-grid overlayGroup">
+                <div class="mdl-cell mdl-cell--1-col c_left"><a href="home.html"><img
+                            src="images/settings-button.png" /></a></div>
+                <div class="mdl-cell mdl-cell--2-col c_center">
+                    <h1>บุญผ่องแอนด์บราเดอร์</h1>
+                </div>
+                <div class="mdl-cell mdl-cell--1-col c_right">
+                    <a href="infohome.html"><img src="images/how-to-button.png" /></a>
+                </div>
+            </div>
+            <model-viewer class="home" alt="บุญผ่องแอนด์บราเดอร์" src="assets/directional_arrow.glb" ar poster="images/Boonpong.jpg"
+                shadow-intensity="1" autoplay camera-controls touch-action="pan-y">
+                <button class="hotspot" slot="hotspot-visor" data-position="-1 3.2 0.35" data-normal="0 0 2">
+                    <div class="annotation">พันโท บุญผ่อง สิริเวชชะพันธ์, ผู้มีส่วนช่วยเหลือเชลยสัมพันธมิตรในช่วงสงครามโลกครั้งที่สอง</div>
+                </button>
+                <button class="hotspot" slot="hotspot-sign" data-position="1 2.2 0.35" data-normal="0 0 2">
+                    <div class="annotation">หลังสงครามยุติ บุญผ่องได้รับเหรียญ w:King's Medal for Courage in the Cause of Freedom</div>
+                </button>
+                <button slot="ar-button"
+                    class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored ar-center">
+                    View AR in your space
+                </button></model-viewer>
+        </main>
+    </div>
+    <div class="popup" id="howto">
+        <div id="showHowto"><img src="images/howto.png" class="cover" /></div>
+        <div id="showHowtoText"><a
+                class="full_btn mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                href="#" onclick="hide('howto')">ฉันเข้าใจแล้ว</a></div>
+    </div>
+    <script>
+        $ = function (id) {
+            return document.getElementById(id);
+            $(id).style.display = 'block';
+        }
+        var show = function (id) {
+            $(id).style.display = 'block';
+        }
+        var hide = function (id) {
+            $(id).style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
