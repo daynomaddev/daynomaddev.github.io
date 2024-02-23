@@ -18,4 +18,4 @@ function carousel() {
 // Automatically change page after 10 seconds
 setTimeout(() => {
     window.location.href = "./home.html";
-}, 8500);
+}, 4500);
