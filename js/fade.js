@@ -12,10 +12,10 @@ function carousel() {
         myIndex = 1;
     }
     x[myIndex - 1].style.display = "block";
-    setTimeout(carousel, 1000);
+    setTimeout(carousel, 2000);
 }
 
 // Automatically change page after 10 seconds
 setTimeout(() => {
     window.location.href = "./home.html";
-}, 4500);
+}, 3000);
