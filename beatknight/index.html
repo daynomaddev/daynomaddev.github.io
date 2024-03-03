@@ -4,10 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Beat Knight XR</title>
-    <meta name="description" content="">
+    <title>Beat Knight XR</title>
+    <meta name="description" content="Beat Knight XR, WebXR Game focusing on adventure, defense, and battling the undead.">
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div id="unity-container">
@@ -20,9 +24,12 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-footer">
+      <div id="center" class="gameVR">
+        <button id="entervr" value="Enter VR" disabled>ENTER VR MODE</button>
+      </div>
+      <div id="unity-footer" class="parent">
         <div id="unity-webgl-logo"></div>
-        <button id="entervr" value="Enter VR" disabled>VR</button>
+        
         <button id="enterar" value="Enter AR" disabled>AR</button>
         <div id="unity-webxr-link">Using <a href="https://github.com/De-Panther/unity-webxr-export" target="_blank" title="WebXR Export">WebXR Export</a></div>
         <div id="unity-build-title">Beat Knight XR</div>
@@ -38,7 +45,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Daydev",
         productName: "Beat Knight XR",
-        productVersion: "2.0",
+        productVersion: "3.0",
       };
 
       var container = document.querySelector("#unity-container");
